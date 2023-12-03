@@ -1,3 +1,3 @@
 ﻿using AOC2023;
 
-Day02.Solve2();
+Day03.Solve2();
