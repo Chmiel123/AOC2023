@@ -42,7 +42,7 @@ namespace AOC2023
         {
             public string Text { get; private set; }
             public int Value { get; private set; }
-            public List<int> Pointers { get; set; }
+            public List<int>? Pointers { get; set; }
 
             public OccurencePointer(string text, int value)
             {
