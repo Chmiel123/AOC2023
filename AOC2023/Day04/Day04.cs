@@ -18,26 +18,8 @@ namespace AOC2023
             foreach (var line in lines)
             {
                 var data = line.Split(new char[] { ':', '|' });
-                var winningNumbersRaw = data[1].Trim().Split(' ');
-                var currentNumbersRaw = data[2].Trim().Split(' ');
-                var winningNumbers = new List<int>();
-                var currentNumbers = new List<int>();
-                foreach (var winningNumberRaw in winningNumbersRaw)
-                {
-                    int parse;
-                    if (int.TryParse(winningNumberRaw, out parse))
-                    {
-                        winningNumbers.Add(parse);
-                    }
-                }
-                foreach (var currentNumberRaw in currentNumbersRaw)
-                {
-                    int parse;
-                    if (int.TryParse(currentNumberRaw, out parse))
-                    {
-                        currentNumbers.Add(parse);
-                    }
-                }
+                var winningNumbers = data[1].Trim().Split(' ').Where(x => !string.IsNullOrEmpty(x)).Select(x => int.Parse(x));
+                var currentNumbers = data[2].Trim().Split(' ').Where(x => !string.IsNullOrEmpty(x)).Select(x => int.Parse(x));
                 var points = 0;
                 foreach (var current in currentNumbers)
                 {
@@ -101,26 +83,8 @@ namespace AOC2023
             {
                 string? line = lines[i];
                 var data = line.Split(new char[] { ':', '|' });
-                var winningNumbersRaw = data[1].Trim().Split(' ');
-                var currentNumbersRaw = data[2].Trim().Split(' ');
-                var winningNumbers = new List<int>();
-                var currentNumbers = new List<int>();
-                foreach (var winningNumberRaw in winningNumbersRaw)
-                {
-                    int parse;
-                    if (int.TryParse(winningNumberRaw, out parse))
-                    {
-                        winningNumbers.Add(parse);
-                    }
-                }
-                foreach (var currentNumberRaw in currentNumbersRaw)
-                {
-                    int parse;
-                    if (int.TryParse(currentNumberRaw, out parse))
-                    {
-                        currentNumbers.Add(parse);
-                    }
-                }
+                var winningNumbers = data[1].Trim().Split(' ').Where(x => !string.IsNullOrEmpty(x)).Select(x => int.Parse(x)).ToList();
+                var currentNumbers = data[2].Trim().Split(' ').Where(x => !string.IsNullOrEmpty(x)).Select(x => int.Parse(x)).ToList();
                 ScratchCard currentSC;
                 if (scratchCards.Count <= i)
                 {
