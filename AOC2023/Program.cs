@@ -1,3 +1,4 @@
 ﻿using AOC2023;
 
-Day06.Solve2();
+Time.TimeMethod(Day06.Solve1);
+Time.TimeMethod(Day06.Solve2);
