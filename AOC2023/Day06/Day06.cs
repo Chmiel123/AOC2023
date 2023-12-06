@@ -72,8 +72,8 @@ namespace AOC2023
                 long y = Func(x, time);
                 long dx = 1;
                 long dy = Func(x + dx, time) - y;
-                double c = (long)((double)y - (double)x / (double)dx * (double)dy);
-                long newX = (long)(((double)record - c) / (double)dy * (double)dx);
+                double c = (long)(y - (double)x / dx * dy);
+                long newX = (long)((record - c) / dy * dx);
                 if (ascending && x >= prevX && newX <= x)
                 {
                     long a = Func(newX - 1, time);
