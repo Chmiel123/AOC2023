@@ -299,6 +299,7 @@ namespace AOC2023
             return (long)(result % prod);
         }
 
+        //TODO: Fast solve
         public static void Solve2_2()
         {
             var className = MethodBase.GetCurrentMethod()?.DeclaringType?.Name;
