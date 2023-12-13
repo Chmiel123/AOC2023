@@ -1,3 +1,3 @@
 ﻿using AOC2023;
 
-Time.TimeMethod(Day12.Solve2);
+Time.TimeMethod(Day13.Solve2);
