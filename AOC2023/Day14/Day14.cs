@@ -231,9 +231,9 @@ namespace AOC2023
                     {
                         var repeatEveryCycles = i - hashes.IndexOf(hash);
                         var toEnd = cycles - i;
-                        Console.WriteLine($"Found repeat i: {i}, repeat: {repeatEveryCycles}, to end: {toEnd}");
+                        //Console.WriteLine($"Found repeat i: {i}, repeat: {repeatEveryCycles}, to end: {toEnd}");
                         i += (int)Math.Floor((double)toEnd / repeatEveryCycles) * repeatEveryCycles;
-                        Console.WriteLine($"Skipped to cycle: {i}");
+                        //Console.WriteLine($"Skipped to cycle: {i}");
                         foundRepeat = true;
                         continue;
                     }
@@ -245,13 +245,13 @@ namespace AOC2023
             {
                 for (int j = 0; j < map[i].Count; j++)
                 {
-                    Console.Write(map[i][j]);
+                    //Console.Write(map[i][j]);
                     if (map[i][j] == 'O')
                     {
                         result += map.Count - i;
                     }
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
             }
 
             Console.WriteLine($"{className}.2: " + result);
