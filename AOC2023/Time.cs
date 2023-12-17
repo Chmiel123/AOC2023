@@ -19,5 +19,17 @@ namespace AOC2023
             Console.WriteLine($"    {elapsedMs}ms");
             return elapsedMs;
         }
+
+        public static long TimeMethod(Action<string> action, string input)
+        {
+            Console.WriteLine($"Start {action.Method.Name}");
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            action.Invoke(input);
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine($"End {action.Method.Name}");
+            Console.WriteLine($"    {elapsedMs}ms");
+            return elapsedMs;
+        }
     }
 }
