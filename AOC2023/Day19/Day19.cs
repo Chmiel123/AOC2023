@@ -225,34 +225,6 @@ namespace AOC2023
                 return result;
             }
 
-            public static long IntersectScore(Part2 p1, Part2 p2)
-            {
-                long result = 1;
-                bool any = true;
-                char[] chars = new char[] { 'x', 'm', 'a', 's' };
-                foreach (var ch in chars)
-                {
-                    var min = Math.Max(p1.PropertiesStart[ch], p2.PropertiesStart[ch]);
-                    var max = Math.Min(p1.PropertiesEnd[ch], p2.PropertiesEnd[ch]);
-                    if (min < max)
-                    {
-                        result *= max - min + 1;
-                    }
-                    else
-                    {
-                        any = false;
-                    }
-                }
-                if (any)
-                {
-                    return result;
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-
             public override string ToString()
             {
                 return $"x: {PropertiesStart['x']}-{PropertiesEnd['x']}, m: {PropertiesStart['m']}-{PropertiesEnd['m']}, a: {PropertiesStart['a']}-{PropertiesEnd['a']}, s: {PropertiesStart['s']}-{PropertiesEnd['s']}, score: {GetScore()}";
