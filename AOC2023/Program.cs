@@ -1,3 +1,3 @@
 ﻿using AOC2023;
 
-Time.TimeMethod(Day18.Solve2, "input.txt");
+Time.TimeMethod(Day19.Solve2, "input.txt");
